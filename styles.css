@@ -23,7 +23,7 @@ h1 {
 /* =======================Tabela================================ */
 .main-container {
     background-color: #fff;
-    max-width: 50%;    
+    max-width: 33.33%;    
     padding: 2rem ;
     border-radius: 0.5rem;
 }
@@ -46,6 +46,7 @@ h1 {
 /* =======================Input area================================ */
 .calc-conteiner h2 {
     margin: 2rem 0;
+    font-size: 1.8rem;
 }
 
 form {
@@ -71,18 +72,32 @@ button {
     min-width: 100%;
     height:  3rem; 
     margin: 1rem 0;
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 
 .result-div {
     display: none;
     align-items: center;
     justify-content: center;
-
+    padding: 0.5rem;
     background-color: #fb7387;
-    min-width: 100%;
+    width: 100%;
     height:  3rem; 
-    font-size: 1.3rem;    
-    padding: 1rem;
+    font-size: 1.3rem;     
+}
+
+/* =======================Responsive================================ */
+@media (max-width: 995px) {
+    .table-weight-container {       
+        grid-template-columns: 1fr;        
+    }
+
+    .table-weight-container p {        
+        line-height: 1.2rem ;
+    }
+
+    .main-container {           
+        padding: 1rem;       
+    }
+    
 }
