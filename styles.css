@@ -23,7 +23,7 @@ h1 {
 /* =======================Tabela================================ */
 .main-container {
     background-color: #fff;
-    max-width: 33.33%;    
+    max-width: 50%;    
     padding: 2rem ;
     border-radius: 0.5rem;
 }
@@ -87,9 +87,15 @@ button {
 }
 
 /* =======================Responsive================================ */
+@media (max-width: 460px) {
+    .main-container {       
+       width: 100%; 
+    }    
+}
 @media (max-width: 995px) {
     .table-weight-container {       
-        grid-template-columns: 1fr;        
+        grid-template-columns: 1fr;       
+        min-width: 50%; 
     }
 
     .table-weight-container p {        
@@ -101,3 +107,4 @@ button {
     }
     
 }
+
