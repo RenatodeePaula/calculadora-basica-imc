@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js" defer></script>
+
+    <!-----------  GOOGLE FONTS-------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+      <h1>Tabela IMC</h1>
+      <div class="table-weight-container">
+        <div class="imc-table">
+            <h3>IMC</h3>
+            <p class="imc-result">Menos de 18,5</p>
+            <p class="imc-result">Entre 18,5 e 24,9</p>
+            <p class="imc-result">Entre 25 e 29,9 </p>
+            <p class="imc-result">Entre 30 e 34,9 </p>
+            <p class="imc-result">Entre 35 e 39,9 </p>
+            <p class="imc-result">Mais do que 40 </p>
+
+        </div>
+        <div class="table-result">
+            <h3>Resultado</h3>
+            <p class="imc-result result-test">Abaixo do Peso</p>
+            <p class="imc-result result-test">Com peso normal</p>
+            <p class="imc-result result-test">Com sobrepeso</p>
+            <p class="imc-result result-test">Com obesidade grau 1</p>
+            <p class="imc-result result-test">Com obesidade grau 2</p>
+            <p class="imc-result result-test">Com obesidade grau 3</p>
+        </div>
+
+      </div>
+      <div class="calc-conteiner">
+        <h2>Calcule seu IMC</h2>
+        <form>
+          <label for="weight">Peso:</label>
+          <input type="number" name="weight" id="weight">
+
+          <label for="weight">Altura:</label>
+          <input type="number" name="height" id="height">
+          <button class="calc-button">Calcular</button>
+          <div class="result-div">
+            <p class="result"></p>
+          </div>
+        </form>       
+      </div>
+    </div>  
+    
+</body>
+</html>
