@@ -17,21 +17,27 @@ calcButton.addEventListener('click', (event) => {
         imcResult.push(imcResultArray[i].textContent);
     }
 
-    if (imcBody > 10 && imcBody <= 18.5) {      
-        imcIndexArray = 0;
-    } else if (imcBody >= 18.5 && imcBody < 24.9) { 
-        imcIndexArray = 1;
-    } else if (imcBody >= 25 && imcBody <= 29.9) {
-        imcIndexArray = 2;            
-    } else if (imcBody >= 30 && imcBody <= 34.9) {
-        imcIndexArray = 3;
-    } else if (imcBody >= 35 && imcBody <= 39.9) {
-        imcIndexArray = 4;
-    } else if (imcBody > 40 && imcBody <= 90) {
-        imcIndexArray = 5;
+    if(weight.value === "" || weight.value.length === 0) {
+        result.textContent = "Digite seu peso." 
+    } else if (height.value === "" || height.value.length === 0) {
+        result.textContent = "Digite sua altura."         
     } else {
-        result.textContent = "Por favor, digite peso e altura válidos!";
-    }      
+        if (imcBody > 10 && imcBody <= 18.5) {      
+            imcIndexArray = 0;
+        } else if (imcBody >= 18.5 && imcBody < 24.9) { 
+            imcIndexArray = 1;
+        } else if (imcBody >= 25 && imcBody <= 29.9) {
+            imcIndexArray = 2;            
+        } else if (imcBody >= 30 && imcBody <= 34.9) {
+            imcIndexArray = 3;
+        } else if (imcBody >= 35 && imcBody <= 39.9) {
+            imcIndexArray = 4;
+        } else if (imcBody > 40 && imcBody <= 90) {
+            imcIndexArray = 5;
+        } else {
+            result.textContent = "Por favor, digite peso e altura válidos!";
+        } 
+    }     
     result.style.display = 'flex';
-    result.textContent = `Seu imc é de ${imcBody.toFixed(2)} você está ${imcResult[imcIndexArray].toLocaleLowerCase()}`;   
+    result.textContent = `Seu imc é de ${imcBody.toFixed(2)} você está ${imcResult[imcIndexArray].toLocaleLowerCase()}.`;   
 });   
